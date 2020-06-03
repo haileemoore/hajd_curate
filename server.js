@@ -46,7 +46,7 @@ app.use(methodOverride('_method'))
 // ROUTES
 //=======================
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World! Repo up and running. Heroku working!')
 })
 
 //=======================
