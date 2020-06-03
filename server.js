@@ -45,8 +45,11 @@ app.use(methodOverride('_method'))
 //=======================
 // ROUTES
 //=======================
+
+// INDEX
+
 app.get('/', (req, res) => {
-  res.send('Hello World! Repo up and running. Heroku working!')
+  res.send('Everything works!')
 })
 
 //=======================
