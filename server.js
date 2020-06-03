@@ -49,7 +49,7 @@ app.use(methodOverride('_method'))
 // INDEX
 
 app.get('/', (req, res) => {
-  res.send('Everything works!')
+  res.send('Everything is up and running!')
 })
 
 //=======================
