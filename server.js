@@ -8,6 +8,8 @@ const app = express()
 const db = mongoose.connection
 require('dotenv').config()
 
+
+const Art = require('./models/schema.js')
 //=======================
 // PORT
 //=======================
@@ -46,10 +48,77 @@ app.use(methodOverride('_method'))
 // ROUTES
 //=======================
 
+// NEW
+
+app.get('/curate/create', (req, res) => {
+  res.render('new.ejs')
+})
+
+// POST (NEW)
+
+app.post('/curate', (req, res) => {
+  Art.create(req.body, () => {
+    res.redirect('/curate')
+  })
+})
+
+// app.post('/curate', (req, res) => {
+//   res.send(req.body)
+// })
+
 // INDEX
 
-app.get('/', (req, res) => {
-  res.send('Everything is up and running!')
+app.get('/curate', (req, res) => {
+  // res.send('Everything is up and running!')
+  Art.find({}, (err, allArt) => {
+    res.render(
+      'index.ejs',
+      {
+          pieces: allArt
+      })
+  })
+})
+
+// SHOW
+
+ app.get('/curate/:id', (req, res) => {
+   Art.findById(req.params.id, (err, foundPiece) => {
+     res.render(
+       'show.ejs',
+       {
+         pieces: foundPiece
+       })
+   })
+ })
+
+// DELETE
+
+app.delete('/curate/:id', (req, res) => {
+  Art.findByIdAndRemove(req.params.id, (err, noPiece) => {
+    res.redirect('/curate')
+  })
+})
+
+// EDIT
+
+app.get('/curate/:id/edit', (req, res) => {
+  Art.findById(req.params.id, (err, foundPiece) => {
+    res.render(
+      'edit.ejs',
+      {
+        pieces: foundPiece
+      }
+    )
+  })
+})
+
+// PUT
+
+app.put('/curate/:id', (req, res) => {
+  Art.findByIdAndUpdate(req.params.id, req.body, {new:true},
+  (err, updatedPiece) => {
+    res.redirect('/curate')
+  })
 })
 
 //=======================
@@ -58,3 +127,35 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log('Listening on port:', PORT);
 })
+
+
+// const manyPieces = [
+//   {
+//     title: 'Sunflowers',
+//     artist: 'Vincent Van Gogh',
+//     img: 'https://imgur.com/7YJGfPR.jpg'
+//   },
+//   {
+//     title: 'The Helicopter Is Following Me',
+//     artist: 'Annie Preece',
+//     img:'https://i.imgur.com/Ecu4w3S.jpg'
+//   },
+//   {
+//     title: 'No. 61',
+//     artist: 'Mark Rothko',
+//     img:'https://imgur.com/r6jlCOi.jpg'
+//   },
+//   {
+//     title: 'No. 19',
+//     artist: 'Jackson Pollock',
+//     img:'https://imgur.com/ErmveKQ.jpg'
+//   },
+// ]
+
+// Art.insertMany(manyPieces, (err, pieces) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(pieces);
+//   }
+// })

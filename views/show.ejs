@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CURATE</title>
+  </head>
+  <body>
+    <div class="show-container">
+      <h1><%=pieces.title%></h1>
+      <h2><%=pieces.artist%></h2>
+      <img src="<%=pieces.img%>" alt="img" />
+      <div class="show-nav">
+        <a href="/curate">HOME</a>
+        <a href="/curate/edit">EDIT</a>
+        <form action="/curate/<%=pieces.id%>?_method=DELETE" method="POST">
+          <a type="submit" value="DELETE" href="/curate">DELETE</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CURATE</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CURATE</h1>
+      <nav class="navbar">
+        <a href="/curate/create">CREATE</a>
+        <a href="/curate/signup">SIGNUP</a>
+        <a href="/curate/login">LOGIN</a>
+      </nav>
+      <div class="cards-container">
+        <ul>
+        <% for (let i = 0; i < pieces.length; i++) { %>
+          <div class="each-card">
+            <li>
+              <a href="/curate/<%=pieces[i].id%>">
+                <%=pieces[i].title.toUpperCase()%>
+              </a>
+              <img src="<%=pieces[i].img%>" alt="img">
+            </li>
+          </div> <!-- END OF EACH-CARD DIV -->
+        <% } %>
+        </ul>
+      </div> <!-- END OF CARDS-CONTAINER DIV -->
+    </div>  <!-- END OF CONTAINER DIV -->
+  </body>
+</html>
