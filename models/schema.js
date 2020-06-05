@@ -10,8 +10,7 @@ const mongoose = require('mongoose')
     {
       title: {type: String, required: true},
       artist: {type: String, required: true},
-      img: {type: String, required: true},
-      date: {type: Date, default: Date.now}
+      img: {type: String, required: true}
     },
   )
 

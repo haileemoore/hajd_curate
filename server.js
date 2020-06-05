@@ -101,7 +101,7 @@ app.delete('/curate/:id', (req, res) => {
 
 // EDIT
 
-app.get('/curate/:id/edit', (req, res) => {
+app.get('/curate/edit', (req, res) => {
   Art.findById(req.params.id, (err, foundPiece) => {
     res.render(
       'edit.ejs',

@@ -5,14 +5,11 @@
     <title>CURATE</title>
   </head>
   <body>
-    <div class="edit-container">
-      <h1>EDIT <%=pieces.title%> </h1>
-      <form action="/curate/<%=pieces.id; %>?_method=PUT" method="POST">
-        <input type="text" name="title" placeholder="TITLE" /><br/>
-        <input type="text" name="artist" placeholder="ARTIST" /><br/>
-        <input type="url" name="img" placeholder="IMAGE URL" /><br/>
-        <a type="submit" href="/curate">SUBMIT EDITS</a>
-      </form>
-    </div>
+    <h1>EDIT PIECE</h1>
+    <form action="/curate/<%=pieces.id %>?_method=PUT" method="POST">
+      TITLE: <input type="text" name="title" value="<%=pieces.title%>" /><br/>
+      ARTIST: <input type="text" name="artist" value="<%=pieces.artist%>" /><br/>
+      <img src="<%=pieces.img%>" alt="img" /><br/>
+    </form>
   </body>
 </html>
