@@ -57,7 +57,7 @@ app.get('/curate/create', (req, res) => {
 // POST (NEW)
 
 app.post('/curate', (req, res) => {
-  Art.create(req.body, () => {
+  Art.create(req.body, (err, createdPiece) => {
     res.redirect('/curate')
   })
 })
