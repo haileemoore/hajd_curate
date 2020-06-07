@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>CURATE</title>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
   </head>
   <body>
     <h1>EDIT PIECE</h1>
     <form action="/curate/<%=pieces.id %>?_method=PUT" method="POST">
       TITLE: <input type="text" name="title" value="<%=pieces.title%>" /><br/>
       ARTIST: <input type="text" name="artist" value="<%=pieces.artist%>" /><br/>
-      <img src="<%=pieces.img%>" alt="img" /><br/>
+      <img src="<%=pieces.img%>" class="img-fluid" alt="img" /><br/>
       <input type="submit" name="" value="SUBMIT EDITS" />
     </form>
   </body>

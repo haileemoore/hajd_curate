@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>CURATE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
   </head>
   <body>
     <div class="container">
@@ -20,7 +22,7 @@
               <a href="/curate/<%=pieces[i].id%>">
                 <%=pieces[i].title.toUpperCase()%>
               </a>
-              <img src="<%=pieces[i].img%>" alt="img">
+              <img src="<%=pieces[i].img%>" class="img-fluid" alt="img">
             </li>
           </div> <!-- END OF EACH-CARD DIV -->
         <% } %>

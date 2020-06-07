@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>CURATE</title>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
   </head>
   <body>
     <div class="show-container">
       TITLE: <%=pieces.title %> <br/>
       ARTIST: <%=pieces.artist %> <br/>
-      <img src="<%=pieces.img %>" alt="img" />
+      <img src="<%=pieces.img %>" class="img-fluid" alt="img" />
       <div class="show-nav">
         <a href="/curate">HOME</a>
         <a href="/curate/<%=pieces.id %>/edit">EDIT</a>

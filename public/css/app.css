@@ -1,0 +1,42 @@
+* {
+  background: gainsboro;
+}
+
+h1 {
+  letter-spacing: 20px;
+  font-size: 62px;
+  padding: 10px;
+  text-align: center;
+}
+
+nav {
+  background: black;
+}
+
+li {
+  list-style-type: none;
+  position: relative;
+  background: none;
+  font-size: 14px;
+}
+
+a {
+  color: white;
+  letter-spacing: 10px;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+img {
+  height: 400px;
+  width: 280px;
+  justify-content: center;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
