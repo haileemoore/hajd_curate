@@ -1,6 +1,10 @@
 # hajd-curate
 GA Project 2
 
+heroku link:
+
+https://hajd-curate.herokuapp.com/curate
+
 Technologies used:
 
 html
@@ -24,4 +28,4 @@ applying css to pages other than the index page
 Notes:
 
 create signup and login features
-solve css 
+solve css
