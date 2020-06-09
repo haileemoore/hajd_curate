@@ -1,12 +1,16 @@
-* {
+/* * {
   background: gainsboro;
-}
+} */
 
 h1 {
-  letter-spacing: 20px;
-  font-size: 62px;
+  letter-spacing: 30px;
+  font-size: 70px;
+  color: black;
+  text-decoration: overline;
   padding: 10px;
   text-align: center;
+  margin-top: 20px;
+  text-shadow: rgb(212,170,0) 6px 5px;
 }
 
 nav {
@@ -20,20 +24,35 @@ li {
   font-size: 14px;
 }
 
+.each-card li {
+  display: flex;
+  flex-direction: column;
+}
+
+.each-card a {
+  padding: 40px;
+  background: none;
+  font-size: 20px;
+  position: absolute;
+  color: black;
+}
+
 a {
   color: white;
   letter-spacing: 10px;
+  align-self: flex-end;
 }
 
 a:hover {
-  color: black;
+  text-shadow: rgb(212,170,0) 6px 5px;
   text-decoration: none;
 }
 
 img {
   height: 400px;
   width: 280px;
-  justify-content: center;
+  align-self: flex-start;
+  margin: 20px;
 }
 
 .img-fluid {
