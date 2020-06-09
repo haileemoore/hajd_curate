@@ -122,17 +122,6 @@ footer {
     flex-direction: column;
   }
 
-  /* .each-card a {
-    padding: 10px;
-    background: none;
-    font-size: 14px;
-    position: absolute;
-    color: white;
-    align-self: center;
-    margin: 30px;
-    text-align: center;
-  } */
-
   a {
     color: white;
     letter-spacing: 10px;
@@ -150,11 +139,6 @@ footer {
     align-self: center;
     margin: 20px;
   }
-
-  /* img:hover {
-    height: 40%;
-    width: 40%;
-  } */
 
   .img-fluid {
     max-width: 100%;
