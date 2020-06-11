@@ -1,4 +1,4 @@
-@media (min-width: 600px) {
+@media (min-width: 500px) {
 
 body {
   padding: 50px;
@@ -64,11 +64,6 @@ img {
   margin: 20px;
 }
 
-img:hover {
-  height: 40%;
-  width: 40%;
-}
-
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -83,7 +78,7 @@ footer {
 
 } /* end of min media query */
 
-@media (max-width: 599px) {
+@media (max-width: 600px) {
   body {
     padding: 10px;
   }
@@ -91,11 +86,11 @@ footer {
   .index-container h1 {
     letter-spacing: 40px;
     font-size: 60px;
-    color: black;
+    color: rgb(212,170,0);
     /* text-decoration: overline; */
     padding: 20px;
     text-align: center;
-    text-shadow: rgb(212,170,0) 6px 5px;
+    text-shadow: black 6px 5px;
   }
 
   nav {
@@ -120,12 +115,20 @@ footer {
   .each-card li {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .each-card a {
+    color: white;
+    align-self: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: black 4px 3px;
   }
 
   a {
     color: white;
     letter-spacing: 10px;
-    font-weight: bold;
   }
 
   a:hover {
